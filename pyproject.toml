@@ -17,12 +17,19 @@ classifiers = [
 ]
 dependencies = [
     "awscli",
+    "biopython>=1.88",
     "loguru",
+    "matplotlib>=3.11.2",
+    "mkdoc>=0.1",
     "mkdocs",
+    "numpy>=2.4.6",
+    "pandas>=3.1.1",
     "pip",
     "pytest",
     "python-dotenv",
     "ruff",
+    "seaborn>=0.13.2",
+    "snakemake>=9.21.0",
     "tqdm",
     "typer",
 ]
@@ -40,4 +47,9 @@ extend-select = ["I"]  # Add import sorting
 [tool.ruff.lint.isort]
 known-first-party = ["python_genomics_data_science"]
 force-sort-within-sections = true
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+]
 
